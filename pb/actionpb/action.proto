@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package action;
+
+option go_package = "pb/actionpb";
+
+import "pb/commonpb/common.proto";
+
+message ActionProcessV1Request {
+  string name = 1;
+  repeated common.ResolveParam resolve_params = 2;
+}
+
+message ActionProcessV1Response {
+  bytes body = 1;
+  common.ClientResponse client_response = 2;
+}
