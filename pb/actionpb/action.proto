@@ -6,6 +6,10 @@ option go_package = "pb/actionpb";
 
 import "pb/commonpb/common.proto";
 
+service ActionProcessor {
+  rpc ActionProcessV1(ActionProcessV1Request) returns (ActionProcessV1Response) {};
+}
+
 message ActionProcessV1Request {
   string name = 1;
   repeated common.ResolveParam resolve_params = 2;
