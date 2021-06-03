@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package action;
 
-option go_package = "pb/actionpb";
+option go_package = "github.com/nikita5637/qask_libs/pb/actionpb";
 
 import "pb/commonpb/common.proto";
 

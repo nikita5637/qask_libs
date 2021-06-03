@@ -2,32 +2,32 @@ syntax = "proto3";
 
 package common;
 
-option go_package = "pb/commonpb";
+option go_package = "github.com/nikita5637/qask_libs/pb/commonpb";
 
 message ClientResponse {
-    int32 response_code = 1;
-    repeated Header headers = 2;
+  int32 response_code = 1;
+  repeated Header headers = 2;
 }
 
 message Header {
-    string key = 1;
-    string value = 2;
+  string key = 1;
+  string value = 2;
 }
 
 enum ResolveParamType {
-    RESOLVE_PARAM_TYPE_INT = 0;
-    RESOLVE_PARAM_TYPE_STRING = 1;
-    RESOLVE_PARAM_TYPE_FLOAT = 2;
+  RESOLVE_PARAM_TYPE_INT = 0;
+  RESOLVE_PARAM_TYPE_STRING = 1;
+  RESOLVE_PARAM_TYPE_FLOAT = 2;
 }
 
 message ResolveParamValue {
-    int64 int = 1;
-    string text = 2;
-    double float = 3;
+  int64 int = 1;
+  string text = 2;
+  double float = 3;
 }
 
 message ResolveParam {
-    string name = 1;
-    ResolveParamType resolve_param_type = 2;
-    ResolveParamValue resolve_param_value = 3;
+  string name = 1;
+  ResolveParamType resolve_param_type = 2;
+  ResolveParamValue resolve_param_value = 3;
 }
